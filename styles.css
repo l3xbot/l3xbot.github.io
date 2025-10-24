@@ -30,8 +30,8 @@
 }
 
 #navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-color: #7d38b0;
+    background-image: linear-gradient(to top, #21d4fd 0%, #8B3DC2 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -88,7 +88,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
+    background: #7d38b0;
     color: #fff;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .navbar__links:hover {
-    color: #f77062;
+    color: #7d38b0;
     transition: all 0.3s ease;
 }
 
@@ -218,8 +218,8 @@
 
 .main__content h1 {
     font-size: 4rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    background-color: #7d38b0;
+    background-image: linear-gradient(to top, #21d4fd 0%, #8B3DC2 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -229,8 +229,8 @@
 
 .main__content h2 {
     font-size: 4rem;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-color: #7d38b0;
+    background-image: linear-gradient(to top, #3bff21 0%, #21d4fd 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -247,7 +247,7 @@
 
 .main__btn {
     font-size: 1rem;
-    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    background-image: linear-gradient(to top, #7D38B0 0%, #401C59 100%);
     padding: 14px 32px;
     border: none;
     border-radius: 4px;
@@ -358,14 +358,14 @@
 }
 
 .services h1 {
-    background-color: #ff8177;
+    background-color: #7d38b0;
     background-image: linear-gradient(to right, 
-    #ff8177 0%, 
-    #ff867a 0%, 
-    #ff8c7f 21%, 
-    #f99185 52%, 
-    #cf556c 78%, 
-    #b12a5b 100%);
+    #DEC9EE 0%, 
+    #A060CD 0%, 
+    #B483D8 21%, 
+    #7D38B0 52%, 
+    #59277C 78%, 
+    #401C59 100%);
     background-size: 100%;
     margin-bottom: 5rem;
     font-size: 2.5rem;
@@ -424,7 +424,7 @@
     border: none;
     outline: none;
     border-radius: 4px;
-    background: #f77062;
+    background: #7d38b0;
     position: absolute;
     top: 440px;
     left: 30px;
@@ -463,4 +463,135 @@
     }
 }
 
+/* Footer CSS */
+.footer__container {
+    background-color: #141414;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+#footer__logo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    color: #fff;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__link--wrapper {
+    display: flex;
+}
+
+.footer__link--items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 16px;
+    text-align: left;
+    width: 160px;
+    box-sizing: border-box;
+}
+
+.footer__link--items h2 {
+    margin-bottom: 16px;
+}
+
+.footer__link--items > h2 {
+    columns: #fff;
+}
+
+.footer__link--items a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+    color: #7d38b0;
+    transition: 0.3s ease;
+}
+
+/* Social Icons */
+.social__icon--link {
+    color: #fff;
+    font-size: 24px;
+}
+
+.socia__media {
+    max-width: 1000px; 
+    width: 100%;
+}
+
+.socia__media--wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+}
+
+.social__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.social__logo {
+    color: #fff;
+    justify-self: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.website__rights {
+    color: #fff;
+}
+
+@media screen and (max-width: 820px) {
+    .footer__links {
+        padding-top: 2rem;
+    }
+
+    #footer__logo {
+        margin-bottom: 2rem;
+    }
+
+    .website__rights {
+        margin-bottom: 2rem;
+    }
+
+    .footer__link--wrapper {
+        flex-direction: column;
+    }
+
+    .socia__media--wrap {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer__link--items {
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+}
