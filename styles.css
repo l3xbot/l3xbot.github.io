@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+:root {
+    --accent: #3DC2B2 /* Puerto Rico Turquoise */
+}
+
+:root {
+    --accent2: #FCF2B5 /* Drover Yellow Accent */
+} 
+
+/* #F6E87B Marigold Yellow */
+
 *{
     margin: 0;
     padding: 0;
@@ -25,7 +35,7 @@
 
 .navbar.sticky {
     padding: 15px 0; 
-    background: #3DC2B2;
+    background: var(--accent);
 }
 
 .navbar .max-width {
@@ -41,7 +51,7 @@
 }
 
 .navbar .logo a span {
-    color: #3DC2B2;
+    color: var(--accent);
     transition: all 0.3s ease;
 }
 
@@ -63,11 +73,11 @@
 }
 
 .navbar .menu li a:hover {
-    color: #3DC2B2;
+    color: var(--accent);
 }
 
 .navbar.sticky .menu li a:hover {
-    color: #fff;
+    color: var(--accent2);
 }
 
 /* Menu Button Styling */
@@ -99,6 +109,7 @@
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 .home .home-content .text-3 {
     font-size: 40px;
@@ -106,25 +117,25 @@
 }
 
 .home .home-content .text-3 span {
-    color: #3DC2B2;
+    color: var(--accent);
     font-weight: 600;
 }
 
 .home .home-content a {
     display: inline-block;
-    background: #3DC2B2;
+    background: var(--accent);
     color: #fff;
     font-size: 25px;
     font-weight: 500;
     padding: 12px 36px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #3DC2B2;
+    border: 2px solid var(--accent);
     transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-    color: #3DC2B2;
+    color: var(--accent);
     background: none;
 }
 
@@ -132,12 +143,8 @@
 /* All Similar Content Styling Code */
 section {
     padding: 100px 0;
-    /* background-color: #111; */
-}
-section {
     font-family: 'Poppins', sans-serif;
 }
-
 section .title {
     position: relative;
     text-align: center;
@@ -162,7 +169,7 @@ section .title::after {
     bottom: -12px;
     left: 50%;
     font-size: 20px;
-    color: #3DC2B2;
+    color: var(--accent);
     padding: 5px;
     background: #111;
     transform: translateX(-50%);
@@ -201,42 +208,42 @@ section .title::after {
     margin-bottom: 10px;
 }
 .about .about-content .right .text span {
-    color: #3DC2B2;
+    color: var(--accent);
 }
 .about .about-content .right p {
     text-align: justify;
 }
 .about .about-content .right a {
     display: inline-block;
-    background: #3DC2B2;
+    background: var(--accent);
     color: #fff;
     font-size: 20px;
     font-weight: 500;
     padding: 10px 30px;
     margin-top: 20px;
     border-radius: 6px;
-    border: 2px solid #3DC2B2;
+    border: 2px solid var(--accent);
     transition: all 0.3s ease;
 }
 .about .about-content .right a:hover {
-    color: #3DC2B2;
+    color: var(--accent);
     background: none;
 }
 
 
-/* SKILLS SECTION STYLING */
-.skills {
+/* Interest Section Styling */
+.interest {
     color: #fff;
     background: #111;
 }
-.skills .title::before {
+.interest .title::before {
     background: #fff;
 }
-.skills .title::after {
+.interest .title::after {
     background: #111;
     content: 'what i provide';
 }
-.skills .skills-content {
+.interest .interest-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -244,7 +251,7 @@ section .title::after {
 }
 
 /* Card (link) Styling */
-.skills .skills-content a.card {
+.interest .interest-content a.card {
     display: block;
     width: calc(33% - 20px);
     background: #222;
@@ -259,34 +266,40 @@ section .title::after {
 }
 
 /* Hover Effects */
-.skills .skills-content a.card:hover {
-    background: #3DC2B2;
+.interest .interest-content a.card:hover {
+    background: var(--accent);
     transform: translateY(-5px); /* lifts slightly upward - scale(1.05) */
     box-shadow: 
         0 10px 20px rgba(0, 0, 0, 0.4),       /* base shadow for depth */
-        0 0 25px rgba(61, 194, 178, 0.6),     /* teal glow */
-        0 0 50px rgba(61, 194, 178, 0.4);     /* softer outer glow */
+        0 0 25px rgba(61, 194, 178, 0.4),     /* teal glow */
+        0 0 50px rgba(61, 194, 178, 0.2);     /* softer outer glow */
 }
 
 /* Icon Styling */
-.skills .skills-content a.card i {
+.interest .interest-content a.card i {
     font-size: 50px;
-    color: #3DC2B2;
+    color: var(--accent);
     transition: color 0.3s ease;
 }
 
 /* Icon Hover: Scales and turns white */
-.skills .skills-content a.card:hover i {
-    color: #fff !important;
+.interest .interest-content a.card:hover i {
+    color: var(--accent2);
     transform: scale(1.3);
 }
 
 /* Text Inside Card */
-.skills .skills-content a.card .text {
+.interest .interest-content a.card .text {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+
+/* Skills Section Styling */
+
+
+
 
 
 /* Responsive Media Query Start */
@@ -367,7 +380,7 @@ section .title::after {
         flex: 100%;
     }
 
-    .skills .skills-content .card {
+    .interest .interest-content a.card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
@@ -387,7 +400,7 @@ section .title::after {
     .home .home-content a {
         font-size: 20px;
     }
-    .skills .skills-content .card {
+    .interest .interest-content a.card {
         width: 100%;
     }
 }    
