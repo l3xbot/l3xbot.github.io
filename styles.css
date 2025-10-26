@@ -285,19 +285,16 @@ section .title::after {
     padding: 20px 25px;
     color: inherit;
     text-decoration: none;
-    cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle default shadow */
 }
 
 /* Hover Effects */
 .interest .interest-content a.card:hover {
-    background: var(--accentT);
-    transform: translateY(-5px); /* lifts slightly upward - scale(1.05) */
-    box-shadow: 
-        0 10px 20px rgba(0, 0, 0, 0.4),       /* base shadow for depth */
-        0 0 25px rgba(61, 194, 178, 0.4),     /* teal glow */
-        0 0 50px rgba(61, 194, 178, 0.2);     /* softer outer glow */
+    /* background: var(--accentT); */
+    transform: translateY(-4px); /* lifts slightly upward - scale(1.05) */
+    box-shadow: 0 0px 25px var(--accentT), 0 0 50px var(--accentT);
+    animation: glowBorder 3s infinite alternate;     /* softer outer glow */
 }
 
 /* Icon Styling */
@@ -348,7 +345,6 @@ section .title::after {
 }
 
 .skills .skills-content .left .text {
-    /* color: var(--accentT); */
     font-size: 22px;
     font-weight: 500;
     margin-top: 0;
@@ -423,6 +419,7 @@ section .title::after {
 }
 
 .skills .skill-card p {
+    cursor: default;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
@@ -438,31 +435,12 @@ section .title::after {
 
 .skills .skill-card:hover img {
     filter: brightness(1.2) saturate(1.2);
-    transform: scale(1.10);
+    transform: scale(1.20);
 }
 
 .skills .skill-card:hover p {
     color: var(--accentT);
 }
-
-
-/* .skills .skills-content .right .category {
-    font-size: 21px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    text-align: left;
-} */
-
-/* .skills .skills-content .right li {
-    font-size: 16px;
-    list-style: none;
-    display: inline-flex;
-    justify-content: space-between;
-    margin-right: 20px;
-    margin-bottom: 15px;
-} */
-
 
 
 
@@ -471,11 +449,118 @@ section .title::after {
 .lia {
     color: #fff;
     background: #111;
+    padding: 100px 0;
 }
-
 .lia .title::after {
     content: 'internship';
 }
+
+.lia .lia-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left Column */
+.lia .lia-left {
+    flex: 0 0 45%;
+}
+
+.lia .lia-left h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--accentT);
+    margin-bottom: 15px;
+}
+
+.lia .lia-left p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.lia .lia-left a {
+    display: inline-block;
+    background: var(--accentT);
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.lia .lia-left a:hover {
+    background: transparent;
+    color: var(--accentT);
+    border: 2px solid var(--accentT);
+}
+
+/* Right Column */
+.lia .lia-right {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+}
+
+/* LIA Cards */
+.lia .lia-card {
+    margin-top: 0;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Card Content */
+.lia .lia-card-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.lia .lia-card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lia .lia-card-header i {
+    color: var(--accentT);
+    font-size: 22px;
+}
+
+.lia .lia-card-header h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.lia .lia-card p {
+    font-size: 15px;
+    color: #fff;
+}
+
+/* Card Hover Pop */
+.lia .lia-card:hover {
+    /* background: var(--accentT); */
+    transform: translateY(-4px);
+    box-shadow: 0 0px 25px var(--accentT), 0 0 50px var(--accentT);
+    animation: glowBorder 3s infinite alternate;
+}
+
+.lia .lia-card:hover .lia-card-header i {
+    color: var(--accentY);
+    transform: scale(1.3);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
 
 
 /* Contact Section Styling */
@@ -587,24 +672,46 @@ section .title::after {
         flex: 100%;
         margin-top: 30px;
     }
-    
+
+    /* LIA Section */
+    .lia .lia-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+    .lia .lia-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .lia .lia-right {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin-top: 40px;
+        width: 100%;
+    }
+    .lia .lia-card {
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+    } 
 }
 
 @media (max-width: 768px) {
     .skills .skills-grid-container {
         padding: 25px;
     }
-
     .skills .skill-card {
         padding: 20px 8px;
         max-width: 110px;
     }
-
     .skills .skill-card img {
         width: 45px;
         height: 45px;
     }
-
     .skills .grid-title {
         font-size: 20px;
     }
@@ -614,12 +721,6 @@ section .title::after {
     .max-width {
         padding: 0 23px;
     }
-    /* .home .home-content .text-2 {
-        font-size: 60px;
-    }
-    .home .home-content .text-3 {
-        font-size: 32px; 
-    } */
     .home .home-content a {
         font-size: 20px;
     }
@@ -628,20 +729,16 @@ section .title::after {
     }
 }    
 
-@media (max-width: 600px) {
-    /* .home .home-content .text-2 {
-        font-size: 50px;
-    }
-    .home .home-content .text-3 {
-        font-size: 28px;
-    } */
-}
 
-@media (max-width: 500px) {
-    /* .home .home-content .text-2 {
-        font-size: 50px;
+/* ====================
+    Globar Animations 
+==================== */
+
+@keyframes glowBorder {
+    0% {
+        box-shadow: 0 0 8px var(--accentT), 0 0 16px var(--accentT);
     }
-    .home .home-content .text-3 {
-        font-size: 27px;
-    } */
-} 
+    100% {
+        box-shadow: 0 0 20px var(--accentT), 0 0 40px var(--accentT);
+    }
+}
