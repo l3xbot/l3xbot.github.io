@@ -9,13 +9,11 @@ $(document).ready(function(){
     // ==============
     // Sticky Navbar 
     // ==============
-    $window.on('scroll', function() {
-        if(this.scrollY > 20){
-            $navbar.addClass('sticky');
-        } else {
-            $navbar.removeClass('sticky');
-        }
-    });
+    if ($window.scrollTop() > 20) {
+        $navbar.addClass('sticky');
+    } else {
+        $navbar.removeClass('sticky');
+    };
 
     // ===================
     // Toggle Mobile Menu 
@@ -31,7 +29,7 @@ $(document).ready(function(){
 
         // Only scroll if the href starts with #
         if (target.startsWith('#') && $(target).length) {
-            e,precentDefault();
+            e.preventDefault();
 
             // Close mobile menu if open
             if ($menu.hasClass('active')) {
@@ -45,6 +43,16 @@ $(document).ready(function(){
             }, 600);
         }
     });
+
+    // Typing Animation Script
+    var typed = new Typed(".typing", {
+        strings: ["AI Developer", "Data Scientist", "ML Developer", "Data Engineer"],
+        typeSpeed: 100,
+        backSpeed: 60,
+        loop: true
+    });
+
+
 
     // ========================
     // CONTACT FORM SUBMISSION 
