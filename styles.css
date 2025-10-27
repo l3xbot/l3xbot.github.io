@@ -364,7 +364,7 @@ section .title::after {
 }
 
 .skills .skills-grid-container {
-    background: #1a1a1a;
+    background: #222;
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
@@ -391,7 +391,7 @@ section .title::after {
 }
 
 .skills .skill-card {
-    background: #111;
+    background: #1a1a1a;
     border-radius: 12px;
     padding: 25px 10px;
     text-align: center;
@@ -413,7 +413,7 @@ section .title::after {
     filter: brightness(0.95) saturate(0.9);
     transition: all 0.3s ease;
     margin-bottom: 12px;
-    background: #1a1a1a;
+    background: #222;
     border-radius: 8px;
     padding: 6px;
 }
@@ -508,7 +508,7 @@ section .title::after {
 /* LIA Cards */
 .lia .lia-card {
     margin-top: 0;
-    background-color: #1a1a1a;
+    background-color: #222;
     border-radius: 12px;
     padding: 25px;
     color: #fff;
@@ -649,7 +649,9 @@ section .title::after {
 .contact .right form .textarea textarea {
     height: 100%;
     width: 100%;
-    border: 1px solid var(--accentY);
+    color: #fff;
+    background-color: #222;
+    border: 0.5px solid var(--accentT);
     border-radius: 6px;
     outline: none;
     padding: 0 15px;
@@ -685,6 +687,29 @@ section .title::after {
     background: none;
 }
 
+/* Form success & error messages */
+.form-message {
+    display: none;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.form-message.success {
+    color: var(--accentT);
+}
+
+.form-message.error {
+    color: #e74c3c;
+}
+
+/* Animation for success */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10%, 90% { opacity: 1; transform: translateT(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
 
 
 

@@ -259,29 +259,32 @@
                 </div>
                 <div class="column right">
                     <div class="text">Send Me a <span>Message</span></div>
-                    <form action="#">
+                    <form id="contact-form" action="https://formspree.io/f/xpwoqzdb" method="POST">
                         <div class="fields">
                             <div class="field name">
-                                <input type='text' placeholder='Name' required>
+                                <input type='text' name="name" placeholder='Name' required>
                             </div>
                             <div class="field email">
-                                <input type='email' placeholder='yourname@example.com' required>
+                                <input type='email' name="email" placeholder='yourname@example.com' required>
                             </div>
                         </div>
 
                         <div class="field subject">
-                            <input type='text' placeholder='Subject' required>
+                            <input type='text' name="subject" placeholder='Subject' required>
                         </div>
                         <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Your message..." required></textarea>
+                            <textarea name="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
                         </div>
                         <div class="button">
                             <button type="submit">Send</button>
                         </div>
+
+                        <!-- Hidden message containters -->
+                         <p id="form-success" class="form-message success">✅ Message sent successfully!</p>
+                         <p id="form-error" class="form-message error">❌ Error: Unable to send message.</p>
                     </form>
                 </div>
             </div>
-            
         </div>
     </section>
 
