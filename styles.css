@@ -1,13 +1,22 @@
+/* ==========
+    IMPORTS
+   ========== */
 /* Fonts from Google Fonts: https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+
+
+/* ===========
+    VARIABLES 
+   =========== */
 /* Colour Variables */
 :root {
     --accentT: #3DC2B2 /* Puerto Rico Turquoise */
 }
 :root {
     --accentY: #FCF2B5 /* Drover Yellow Accent */
-} /* #F6E87B Marigold Yellow */
+} 
+
 
 
 *{
@@ -16,23 +25,25 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
 html, body {
     overflow-x: hidden; /* ensures no element on the page causes overflow on x-axis */
 }
-
 .max-width {
     max-width: 1500px;
     padding: 0 80px;
     margin: auto;
 }
 
-/* Navbar  Styling */
+
+
+/* ================
+    NAVBAR STYLING 
+   ================ */
 .navbar {
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding: 30px 0; /*Adds padding above and below*/
+    padding: 30px 0; 
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
 }
@@ -79,20 +90,25 @@ html, body {
 }
 
 
-/* Menu Button Styling */
+
+/* =====================
+    MENU BUTTON STYLING
+   ===================== */
 .menu-btn {
     color: #fff;
     font-size: 23px;
     cursor: pointer;
     display: none;
 }
-
 .menu-btn:hover {
     color: var(--accentY);
 }
 
 
-/* Home Section Styling */
+
+/* ======================
+    HOME SECTION STYLING
+   ====================== */
 .home {
     display: flex;
     background: url('images/pexels-pachon-in-motion-426015731-18337643.jpg') no-repeat center;
@@ -106,7 +122,6 @@ html, body {
     padding: 0 30px;
     text-align: left;
 }
-
 /* Text-1: "Hello, my name is" */
 .home .home-content .text-1 {
     font-size: clamp(18px, 2.5vw, 27px);
@@ -158,8 +173,9 @@ html, body {
 
 
 
-
-/* All Similar Content Styling Code */
+/* ===================================
+    SIMILAR CONTENT STYLING: SECTIONS
+   =================================== */
 section {
     padding: 100px 0;
     font-family: 'Poppins', sans-serif;
@@ -196,8 +212,9 @@ section .title::after {
 
 
 
-
-/* About Section Styling */
+/* =======================
+    ABOUT SECTION STYLING
+   ======================= */
 .about {
     color: #fff;
     background: #111;
@@ -211,7 +228,7 @@ section .title::after {
     align-items: center;
     justify-content: space-between;
 }
-
+/* About: Left column */
 .about .about-content .left {
     width: 45%;
 }
@@ -221,6 +238,7 @@ section .title::after {
     object-fit: cover;
     border-radius: 6px;
 }
+/* About: Right column */
 .about .about-content .right {
     width: 55%;
 }
@@ -255,8 +273,9 @@ section .title::after {
 
 
 
-
-/* Interest Section Styling */
+/* ===================================
+    AREAS OF INTEREST SECTION STYLING
+   =================================== */
 .interest {
     color: #fff;
     background: #111;
@@ -274,8 +293,7 @@ section .title::after {
     align-items: center;
     justify-content: space-between;
 }
-
-/* Card (link) Styling */
+/* Interest: Card (link) Styling */
 .interest .interest-content a.card {
     display: block;
     width: calc(33% - 20px);
@@ -288,29 +306,25 @@ section .title::after {
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle default shadow */
 }
-
-/* Hover Effects */
+/* Interest: Hover Effects */
 .interest .interest-content a.card:hover {
     /* background: var(--accentT); */
     transform: translateY(-4px); /* lifts slightly upward - scale(1.05) */
     box-shadow: 0 0px 25px var(--accentT), 0 0 50px var(--accentT);
     animation: glowBorder 3s infinite alternate;     /* softer outer glow */
 }
-
-/* Icon Styling */
+/* Interest: Icon Styling */
 .interest .interest-content a.card i {
     font-size: 50px;
     color: var(--accentT);
     transition: color 0.3s ease;
 }
-
-/* Icon Hover: Scales and turns white */
+/* Interest: Icon Hover - Scales and turns white */
 .interest .interest-content a.card:hover i {
     color: var(--accentY);
     transform: scale(1.3);
 }
-
-/* Text Inside Card */
+/* Interest: Text Inside Card */
 .interest .interest-content a.card .text {
     font-size: 25px;
     font-weight: 500;
@@ -319,8 +333,9 @@ section .title::after {
 
 
 
-
-/* Skills Section Styling */
+/* ========================
+    SKILLS SECTION STYLING
+   ======================== */
 .skills {
     color: #fff;
     background: #111;
@@ -334,35 +349,31 @@ section .title::after {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .skills .skills-content .column {
     width: calc(50% - 30px);
     margin-top: 0;  /* Reset any uneven spacing */
 }
-
 .skills .skills-content .text span {
     color: var(--accentT);
 }
-
+/* Skills: Left column */
 .skills .skills-content .left .text {
     font-size: 22px;
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 10px;
 }
-
 .skills .skills-content .left p {
     position: relative;
     text-align: left;
     font-size: 16px;
     font-weight: 400;
 }
-
 .skills .skills-content .left a {
     color: var(--accentT);
     font-size: 14px;
 }
-
+/* Skills: Right column / grid */
 .skills .skills-grid-container {
     background: #222;
     border-radius: 15px;
@@ -370,7 +381,6 @@ section .title::after {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     width: 100%;
 }
-
 .skills .grid-title {
     text-align: center;
     color: #fff;
@@ -378,18 +388,16 @@ section .title::after {
     margin-bottom: 30px;
     font-weight: 600;
 }
-
 .skills .grid-title span {
     color: var(--accentT);
 }
-
 .skills .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 25px;
     justify-items: center;
 }
-
+/* Skills: Cards */
 .skills .skill-card {
     background: #1a1a1a;
     border-radius: 12px;
@@ -404,8 +412,7 @@ section .title::after {
     align-items: center;
     justify-content: space-between;
 }
-
-/* === Skills: Logo Images === */
+/* Skills: Logo Images */
 .skills .skill-card img {
     width: 55px;
     height: 55px;
@@ -417,7 +424,6 @@ section .title::after {
     border-radius: 8px;
     padding: 6px;
 }
-
 .skills .skill-card p {
     cursor: default;
     color: #fff;
@@ -425,27 +431,25 @@ section .title::after {
     font-weight: 500;
     transition: color 0.3s ease;
 }
-
-/* === Skills: Hover Effect === */
+/* Skills: Hover Effect */
 .skills .skill-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     background: #181818;
 }
-
 .skills .skill-card:hover img {
     filter: brightness(1.2) saturate(1.2);
     transform: scale(1.20);
 }
-
 .skills .skill-card:hover p {
     color: var(--accentT);
 }
 
 
 
-
-/* LIA Section Styling */
+/* =====================
+    LIA SECTION STYLING
+   ===================== */
 .lia {
     color: #fff;
     background: #111;
@@ -454,33 +458,28 @@ section .title::after {
 .lia .title::after {
     content: 'internship';
 }
-
 .lia .lia-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
 /* Left Column */
 .lia .lia-left {
     flex: 0 0 45%;
 }
-
 .lia .lia-left h3 {
     font-size: 24px;
     font-weight: 600;
     color: var(--accentT);
     margin-bottom: 15px;
 }
-
 .lia .lia-left p {
     font-size: 16px;
     line-height: 1.7;
     margin-bottom: 25px;
     color: #fff;
 }
-
 .lia .lia-left a {
     display: inline-block;
     background: var(--accentT);
@@ -490,13 +489,11 @@ section .title::after {
     text-decoration: none;
     transition: 0.3s ease;
 }
-
 .lia .lia-left a:hover {
     background: transparent;
     color: var(--accentT);
     border: 2px solid var(--accentT);
 }
-
 /* Right Column */
 .lia .lia-right {
     flex: 0 0 50%;
@@ -504,7 +501,6 @@ section .title::after {
     flex-direction: column;
     gap: 25px
 }
-
 /* LIA Cards */
 .lia .lia-card {
     margin-top: 0;
@@ -517,44 +513,37 @@ section .title::after {
     border: 2px solid transparent;
     transition: all 0.3s ease;
 }
-
-/* Card Content */
+/* LIA: Card Content */
 .lia .lia-card-content {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
 }
-
 .lia .lia-card-header {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .lia .lia-card-header i {
     color: var(--accentT);
     font-size: 22px;
 }
-
 .lia .lia-card-header h3 {
     font-size: 22px;
     font-weight: 600;
 }
-
 .lia .lia-card p {
     font-size: 15px;
     color: #fff;
 }
-
-/* Card Hover Pop */
+/* LIA: Card Hover Pop */
 .lia .lia-card:hover {
     /* background: var(--accentT); */
     transform: translateY(-4px);
     box-shadow: 0 0px 25px var(--accentT), 0 0 50px var(--accentT);
     animation: glowBorder 3s infinite alternate;
 }
-
 .lia .lia-card:hover .lia-card-header i {
     color: var(--accentY);
     transform: scale(1.3);
@@ -563,88 +552,75 @@ section .title::after {
 
 
 
-/* Contact Section Styling */
+/* =========================
+    CONTACT SECTION STYLING
+   ========================= */
 .contact {
     color: #fff;
     background: #111;
 }
-
 .contact .title::after {
     content: 'get in touch';
 }
-
 .contact .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-
 .contact .contact-content .column {
     width: calc(50% - 30px);
 }
-
 .contact .contact-content .text {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 .contact .contact-content .text span {
     color: var(--accentT);
 }
-
+/* Contact: Left column */
 .contact .contact-content .left p {
     text-align: justify;
 }
-
 .contact .contact-content .left .icons {
     margin: 10px 0;
 }
-
 .contact .contact-content .row {
     display: flex;
     height: 65px;
     align-items: center;
 }
-
 .contact .contact-content .row .info {
     margin-left: 30px;
 }
-
 .contact .contact-content .row i {
     font-size: 25px;
     color: var(--accentT);
 }
-
 .contact .contact-content .info .head {
     font-weight: 600;
 }
-
 /* Contact: Right Column */
 .contact .right form .fields {
     display: flex;
 }
-
 .contact .right form .field,
 .contact .right form .fields .field {
     height: 45px;
     width: 100%;
     margin-bottom: 15px;
 }
-
 .contact .right form .textarea {
     height: clamp(40px, 15vh, 80px);
     width: 100%;
 }
-
 .contact .right form .name {
     margin-right: 10px;
 }
 .contact .right form .email {
     margin-left: 10px;
 }
-
 .contact .right form .field input,
 .contact .right form .textarea textarea {
     height: 100%;
@@ -658,17 +634,15 @@ section .title::after {
     font-size: 17px;
     font-family: 'Poppins', sans-serif;
 }
-
 .contact .right form .textarea textarea {
     padding-top: 10px;
     resize: none;
 }
-
 .contact .right form .button {
     height: 47px;
     width: calc(50% - 10px);
 }
-
+/* Contact: Button (send) */
 .contact .right form .button button {
     width: 100%;
     height: 100%;
@@ -681,12 +655,10 @@ section .title::after {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 .contact .right form .button button:hover {
     color: var(--accentT);
     background: none;
 }
-
 /* Form success & error messages */
 .form-message {
     display: none;
@@ -695,30 +667,61 @@ section .title::after {
     font-size: 15px;
     transition: opacity 0.3s ease;
 }
-
 .form-message.success {
     color: var(--accentT);
 }
-
 .form-message.error {
     color: #e74c3c;
 }
 
-/* Animation for success */
-@keyframes fadeInOut {
-    0% { opacity: 0; transform: translateY(10px); }
-    10%, 90% { opacity: 1; transform: translateT(0); }
-    100% { opacity: 0; transform: translateY(-10px); }
+
+
+/* ========================
+    FOOTER SECTION STYLING
+   ======================== */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    font-family: 'Poppins', sans-serif;
+}
+/* Footer: Social Icons */
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+footer .social-icons .icon {
+    color: #fff;
+    font-size: 22px;
+    transition: all 0.3 ease;
+}
+footer .social-icons .icon:hover {
+    color: var(--accentT);
+    transform: scale(1.3);
+}
+/* Footer Text */
+footer span {
+    display: block;
+    font-size: 14px;
+}
+footer span a {
+    color: var(--accentT);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer span a:hover {
+    text-decoration: underline;
+    color: var(--accentY);
 }
 
 
 
-
-
-
-
-
-/* Responsive Media Query Start */
+/* ==============================
+    RESPONSIVE MEDIA QUERY START
+   ============================== */
 @media (max-width: 1300px) {
     .home .max-width {
         margin-left: 0px;
@@ -752,7 +755,7 @@ section .title::after {
         content: '\f00d';
     }
 
-    /* Navbar Manu */
+    /* === Navbar Manu === */
     .navbar .menu {
         position: fixed;
         height: 100vh;
@@ -779,13 +782,13 @@ section .title::after {
         font-size: 25px;
     }
 
-    /* Home Section */
+    /* === Home Section === */
     .home .home-content a {
         font-size: 23px;
         padding: 10px 30px;
     }
 
-    /* About Section */
+    /* === About Section === */
     .about .about-content .column {
         width: 100%;
     }
@@ -798,13 +801,13 @@ section .title::after {
         flex: 100%;
     }
 
-    /* Interest Section */
+    /* === Interest Section === */
     .interest .interest-content a.card {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
 
-    /* Skills Section */
+    /* === Skills Section === */
     .skills .skills-content .column {
         width: 100%;
     }
@@ -816,7 +819,7 @@ section .title::after {
         margin-top: 30px;
     }
 
-    /* LIA Section */
+    /* === LIA Section === */
     .lia .lia-content {
         flex-direction: column;
         align-items: center;
@@ -842,15 +845,13 @@ section .title::after {
         margin: 0 auto;
     } 
 
-    /* Contact Section */
+    /* === Contact Section === */
     .contact .contact-content .column {
         width: 100%;
     }
-
     .contact .contact-content .left {
         flex: 100%;
     }
-
     .contact .contact-content .right {
         flex: 100%;
         margin-top: 30px;
@@ -889,8 +890,8 @@ section .title::after {
 
 /* ====================
     Globar Animations 
-==================== */
-
+   ==================== */
+/* Border glow animation */
 @keyframes glowBorder {
     0% {
         box-shadow: 0 0 8px var(--accentT), 0 0 16px var(--accentT);
@@ -898,4 +899,11 @@ section .title::after {
     100% {
         box-shadow: 0 0 20px var(--accentT), 0 0 40px var(--accentT);
     }
+}
+
+/* Animation for success */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    10%, 90% { opacity: 1; transform: translateT(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
 }
