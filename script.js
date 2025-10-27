@@ -9,11 +9,13 @@ $(document).ready(function(){
     // ==============
     // Sticky Navbar 
     // ==============
-    if ($window.scrollTop() > 20) {
-        $navbar.addClass('sticky');
-    } else {
-        $navbar.removeClass('sticky');
-    };
+    $window.on('scroll', function() {
+        if(this.scrollY > 20){
+            $navbar.addClass('sticky');
+        } else {
+            $navbar.removeClass('sticky');
+        }
+    });
 
     // ===================
     // Toggle Mobile Menu 
