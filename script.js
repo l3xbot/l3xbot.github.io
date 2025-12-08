@@ -102,4 +102,17 @@ $(document).ready(function(){
     }
 
 
+    // ================================
+    // AUTO-FILL SUBJECT FROM LIA CARD 
+    // ================================
+    $('.lia-card').on('click', function () {
+        const predefined = $(this).data('subject');     // read data-subject
+        const subjectInput = $('input[name="subject"]');
+
+        if (predefined) {
+            subjectInput.val(predefined);
+        }
+    });
+
+
 });
