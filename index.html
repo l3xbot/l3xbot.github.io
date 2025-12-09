@@ -22,7 +22,7 @@
 
 
     <!-- Navigation Bar  -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="max-width">
             <div class="logo"><a href="#home">A | <span>G</span></a></div>
             <ul class="menu">
@@ -82,30 +82,29 @@
             <h2 class="title">Areas of Interest</h2>
             <div class="interest-content">
 
-                <a href="#skills" class="card">
+                <a class="card" data-title='Data&nbsp;Science' data-text="Here is a detailed description of Data Science">
                     <div class="box">
                         <i class="fa-solid fa-chart-simple"></i>
-                        <div class="text">Data Science</div>
+                        <div class="text">Data&nbsp;Science</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                 Enim, nobis?</p>
                     </div>
                 </a>
 
-                <a href="#skills" class="card">
+                <a class="card" data-title='AI&nbsp;&&nbsp;ML' data-text="Here is a detailed description of AI & ML">
                     <div class="box">
                         <i class="fa-solid fa-circle-nodes"></i>
-                        <div class="text">AI & ML</div>
+                        <div class="text">AI&nbsp;&&nbsp;ML</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Enim, nobis?</p>
                     </div>
                 </a>
 
-                <a href="#skills" class="card">
+                <a class="card" data-title='Programming' data-text="Here is a detailed description of Programming">
                     <div class="box">
                         <i class="fa-solid fa-code"></i>
                         <div class="text">Programming</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Enim, nobis?</p>
+                        <p>Python programming </p>
                     </div>
                 </a>
 
@@ -248,7 +247,9 @@
             <div class="contact-content">
                 <div class="column left">
                     <div class="text">Get in <span>Touch</span></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates magnam molestiae in nemo facere, blanditiis iste adipisci iusto illo officia.</p>
+                    <p>If you have any questions or wish to get in touch, 
+                        feel free to contact me via email or via the form. </p>
+                    <p>I'll get back to you as soon as possible!</p>
                     <div class="icons">
                         <div class="row">
                             <i class="fas fa-user"></i>
@@ -325,8 +326,21 @@
 
         <span>Created By <a href="https://github.com/l3xbot">Alexander Glimmark</a> | <span class="fa-regular fa-copyright"></span> 2025 All Rights Reserved</span>
     </footer>
-     
+
+
     <!-- JavaScript code -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
+
+
+    <!-- Interest Card Modal -->
+    <div id="interest-modal" class="interest-modal">
+        <div class="interest-modal-content">
+            <span id="interest-modal-close" class="modal-close">&times;</span>
+
+        <!-- Card content gets injected here -->
+            <div id="interest-modal-inner"></div>
+        </div>
+    </div>
+
 </body>
 </html>

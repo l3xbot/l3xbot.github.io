@@ -23,6 +23,9 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 html, body {
     overflow-x: hidden; /* ensures no element on the page causes overflow on x-axis */
 }
@@ -310,10 +313,14 @@ section .title::after {
     align-items: center;
     justify-content: space-between;
 }
-/* Interest: Card (link) Styling */
+/* Interest: Card Styling */
 .interest .interest-content a.card {
     display: block;
     width: calc(33% - 20px);
+    height: 223px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: #222;
     text-align: center;
     border-radius: 6px;
@@ -347,6 +354,86 @@ section .title::after {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+/* Interest: Modal */
+.interest-modal {
+    display: none;  /* toggle via JS code */
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* width: 100%;
+    height: 100%; */
+}
+
+/* Modal card */
+.interest-modal-content {
+    width: min(900px, 96%);
+    max-width: calc(100vh - 80px);
+    overflow-y: auto;
+    background: #111;
+    color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    position: relative;
+    transition: transform 220ms ease, opacity 220ms ease;
+    transform: translateY(-8px);
+    opacity: 0;
+    /* ensure modal uses same fonts for headings / paragraphs */
+    font-family: inherit;
+}
+
+/* Show state */
+.interest-modal.show .interest-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Close button */
+.modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 6px 10px;
+}
+
+/* Preserve card formatting inside modal */
+#interest-modal-inner h3,
+#interest-modal-inner .text {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--accentT);
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#interest-modal-inner p {
+    font-family: inherit;
+    color: #e6e6e6;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+@keyframes modalFade {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
 
 
 

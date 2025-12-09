@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    // Cache selectors for preformance
+    // Cache selectors for performance
     var $window = $(window);
     var $navbar = $('.navbar');
     var $menu = $('.navbar .menu');
@@ -55,7 +55,6 @@ $(document).ready(function(){
     });
 
 
-
     // ========================
     // CONTACT FORM SUBMISSION 
     // ========================
@@ -101,7 +100,6 @@ $(document).ready(function(){
         });
     }
 
-
     // ================================
     // AUTO-FILL SUBJECT FROM LIA CARD 
     // ================================
@@ -114,5 +112,36 @@ $(document).ready(function(){
         }
     });
 
+
+    // ================================
+    // INTEREST CARD MODAL 
+    // ================================
+    document.querySelectorAll('.interest-content a.card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            e.preventDefault(); // prevent page jump
+
+            // Get the HTML inside .box (icon + title + text)
+            const cardHTML = card.querySelector('.box').innerHTML;
+
+            // Insert the content into the modal container
+            document.getElementById('interest-modal-inner').innerHTML = cardHTML;
+
+            // Show the modal
+            document.getElementById('interest-modal').style.display = 'flex';
+        })
+    });
+
+    // Close modal when clicking X
+    document.getElementById('interest-modal-close').addEventListener('click', () => {
+        document.getElementById('interest-modal').style.display = 'none';
+    });
+
+    // Close when clicking the dark backdrop
+    document.getElementById('interest-modal').addEventListener('click', (e) => {
+        // Only close if clicking outside the modal content
+        if (e.target === e.currentTarget) {
+            e.currentTarget.style.display = 'none'
+        }
+    });
 
 });
