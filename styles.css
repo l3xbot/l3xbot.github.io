@@ -311,7 +311,7 @@ section .title::after {
 }
 .interest .title::after {
     background: #111;
-    content: 'what i provide';
+    content: "where i'm going";
 }
 .interest .interest-content {
     display: flex;
@@ -376,14 +376,15 @@ section .title::after {
 }
 /* Modal card */
 .interest-modal-content {
-    width: min(900px, 96%);
-    max-width: calc(100vh - 80px);
+    width: min(90%, 900px);
+    max-height: 90vh;
+    /* max-width: calc(100vh - 80px); */
     overflow-y: auto;
     background: #111;
     color: #fff;
     border-radius: 14px;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
-    padding: 30px;
+    padding: 20px;
     position: relative;
     transition: transform 220ms ease, opacity 220ms ease;
     transform: translateY(-8px);
@@ -1050,7 +1051,17 @@ footer span a:hover {
     .interest .interest-content a.card {
         width: 100%;
     }
-}    
+}
+
+/* Modal for very small screens */
+@media (max-width: 480px) {
+    #interest-modal-inner h3 {
+        font-size: 22px;
+    }
+    #interest-modal-inner p {
+        font-size: 14px;
+    }
+}
 
 
 /* ====================

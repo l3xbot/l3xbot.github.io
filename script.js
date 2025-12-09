@@ -120,11 +120,23 @@ $(document).ready(function(){
         card.addEventListener('click', (e) => {
             e.preventDefault(); // prevent page jump
 
-            // Get the HTML inside .box (icon + title + text)
-            const cardHTML = card.querySelector('.box').innerHTML;
+            // Get the data attributes 
+            const title = card.dataset.title || "";
+            const text = card.dataset.text || "";
 
-            // Insert the content into the modal container
-            document.getElementById('interest-modal-inner').innerHTML = cardHTML;
+            // Get the icon HTML for the .box
+            const iconHTML = card.querySelector('i').outerHTML;
+
+            // Build modal content
+            const modalContent = `
+                <div class="modal-icon">${iconHTML}</div>
+                <h3>${title}</h3>
+                <p>${text}</p>    
+            `;
+
+            // Insert into modal container
+            const modalInner = document.getElementById('interest-modal-inner');
+            modalInner.innerHTML = modalContent
 
             // Show the modal
             const modal = document.getElementById('interest-modal');
