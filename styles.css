@@ -17,6 +17,9 @@
 
 
 
+/* ================
+    GLOBAL STYLING
+   ================ */
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +36,9 @@ html, body {
     max-width: 1500px;
     padding: 0 80px;
     margin: auto;
+}
+body {
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -329,6 +335,7 @@ section .title::after {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* subtle default shadow */
+    cursor: pointer;
 }
 /* Interest: Hover Effects */
 .interest .interest-content a.card:hover {
@@ -354,7 +361,6 @@ section .title::after {
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
-
 /* Interest: Modal */
 .interest-modal {
     display: none;  /* toggle via JS code */
@@ -367,12 +373,7 @@ section .title::after {
     justify-content: center;
     padding: 30px;
     font-family: inherit;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* width: 100%;
-    height: 100%; */
 }
-
 /* Modal card */
 .interest-modal-content {
     width: min(900px, 96%);
@@ -387,10 +388,8 @@ section .title::after {
     transition: transform 220ms ease, opacity 220ms ease;
     transform: translateY(-8px);
     opacity: 0;
-    /* ensure modal uses same fonts for headings / paragraphs */
     font-family: inherit;
 }
-
 /* Show state */
 .interest-modal.show .interest-modal-content {
     transform: translateY(0);
@@ -410,7 +409,37 @@ section .title::after {
     line-height: 1;
     padding: 6px 10px;
 }
-
+/* Make card content visible */
+#interest-modal-inner .box {
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-family: inherit;
+}
+/* Icon styling (ONLY inside modal box) */
+#interest-modal-inner {
+    font-size: 48px;
+    color: var(--accentT);
+    margin-bottom: 16px;
+    /* display: inline-block; */
+}
+/* Title text inside modal */
+#interest-modal-inner .box .text {
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--accentT);
+    margin: 12px 0;
+    font-size: 28px;
+}
+/* Modal description paragraph */
+#interest-modal-inner .box p {
+    font-family: inherit;
+    color: #e6e6e6;
+    line-height: 1.7;
+    margin-top: 10px;
+    font-size: 16px;
+}
 /* Preserve card formatting inside modal */
 #interest-modal-inner h3,
 #interest-modal-inner .text {
@@ -420,20 +449,14 @@ section .title::after {
     margin-bottom: 10px;
     font-size: 28px;
 }
-
+/* Description text */
 #interest-modal-inner p {
     font-family: inherit;
     color: #e6e6e6;
     line-height: 1.7;
     margin-bottom: 18px;
-    font-size: 16px;
-}
-
-@keyframes modalFade {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
+    font-size: 16px; 
+} 
 
 
 
@@ -1031,7 +1054,7 @@ footer span a:hover {
 
 
 /* ====================
-    Globar Animations 
+    GLOBAL ANIMATIONS
    ==================== */
 /* Border glow animation */
 @keyframes glowBorder {
@@ -1054,4 +1077,10 @@ footer span a:hover {
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
+}
+
+/* Modal fade animation */
+@keyframes modalFade {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
 }

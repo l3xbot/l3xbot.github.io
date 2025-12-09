@@ -127,20 +127,28 @@ $(document).ready(function(){
             document.getElementById('interest-modal-inner').innerHTML = cardHTML;
 
             // Show the modal
-            document.getElementById('interest-modal').style.display = 'flex';
-        })
+            const modal = document.getElementById('interest-modal');
+            modal.style.display = 'flex'
+
+            // Add show class to trigger CSS animation
+            modal.classList.add('show');
+        });
     });
 
     // Close modal when clicking X
     document.getElementById('interest-modal-close').addEventListener('click', () => {
-        document.getElementById('interest-modal').style.display = 'none';
+        const modal = document.getElementById('interest-modal');
+        modal.classList.remove('show');
+        setTimeout(() => modal.style.display = 'none', 220);    // wait for animation
     });
 
     // Close when clicking the dark backdrop
     document.getElementById('interest-modal').addEventListener('click', (e) => {
         // Only close if clicking outside the modal content
         if (e.target === e.currentTarget) {
-            e.currentTarget.style.display = 'none'
+            const modal = e.currentTarget;
+            modal.classList.remove('show');
+            setTimeout(() => modal.style.display = 'none', 220);    // wait for animation
         }
     });
 
