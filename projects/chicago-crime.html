@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chicago Crime Data Analysis & Visualisation | Alexander Glimmark</title>
+
+    <link rel="icon" type="image/x-icon" href="../images/icons8-code-96.png" >
+    <link rel="stylesheet" href="../styles.css">
+
+    <!-- Icons from Font Awesome: https://fontawesome.com/start?o=r -->
+    <script
+        src="https://kit.fontawesome.com/5bcf052ad7.js"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Navbar Hamburger -->
+    <script src="../navbar.js" defer></script>
+    
+</head>
+
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar project-navbar" role="navigation" aria-label="Main Navigation">
+        <div class="max-width">
+
+            <div class="logo">
+                <a href="../index.html#home">A | <span>G</span></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../index.html#lia">LIA</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <main class="project-page">
+
+        <section class="project-hero">
+            <div class="max-width">
+
+                <a href="../index.html#projects" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to projects
+                </a>
+
+                <h1>Chicago Crime Data Analysis & Visualisation</h1>
+
+                <p class="project-intro">
+                    An exploration of Chicago crime and socioeconomic data,
+                    focusing on data visualisation, temporal patterns, and 
+                    geospatial analysis.
+                </p>
+
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>Plotly</span>
+                    <span>GeoPandas</span>
+                    <span>Folium</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- About the Project -->
+        <section class="project-section">
+            <div class="max-width">
+                <h2>About the Project</h2>
+
+                <p>
+                    As part of my studies, I completed a project analysing crime data
+                     from the City of Chicago (2008-2012). I combined crime records
+                      with socioeconomic data to examine patterns over time, 
+                      by location, and across community areas. 
+                </p>
+
+                <p>
+                    My work involved preparing and transforming the data for analysis, 
+                    exploring relationships within the datasets, and presenting the results 
+                    through a range of static and interactive visualisations. 
+                    Data visualisation became one of my favourite aspects of the project, 
+                    especially finding ways to make larger, 
+                    more complex datasets easier to explore and understand. 
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Exploring Crime Patterns -->
+        <section class="project-section">
+            <div class="max-width">
+
+                <h2>Exploring Crime Patterns</h2>
+
+                <p>
+                    I began the analysis by looking broadly at the different types of crime
+                    recorded in the dataset and how their frequency changed over time.
+                </p>
+
+                <p class="visualisation-hint">
+                    Scroll within the visualisation to explore all crime categories.
+                    On smaller screens, you can also scroll horizontally.
+                </p>
+
+                <div class="project-visual">
+                    <iframe 
+                        class="plotly-frame"
+                        src="../visualisations/crime_plot_2008_vs_2012.html" 
+                        title="Interactive comparison of Chicago crime types in 2008 and 2012"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <p>
+                    The comparison shows how recorded crime counts changed between
+                    2008 and 2012 across a wide range of categories. 
+                    The interactive Plotly visualisation allows each category 
+                    to be explored individually by hovering over the bars. 
+                </p>
+
+                <p>
+                    After exploring the broader crime patterns, I narrowed 
+                    the analysis to motor vehicle thefts to investigate how 
+                    incidents varied by weekday and time of day. 
+                </p>
+
+                <div class="project-visual">
+                    <img 
+                        src="../images/projects/vehicle_thefts_heatmap.png" 
+                        alt="Heatmap showing motor vehicle thefts in Chicago by weekday and hour">
+                </div>
+
+                <p>
+                    The heatmap highlights a much stronger pattern by time 
+                    of day than by weekday, with incidents generally becoming 
+                    more frequent later in the day. 
+                </p>
+            </div>
+        </section>
+
+        <!-- Socioeconomic Factors & Crime -->
+        <section class="project-section">
+            <div class="max-width">
+
+                <h2>Socioeconomic Factors and Crime</h2>
+
+                <p>
+                    To add socioeconomic context to the crime data, 
+                    I combined the crime records with Chicago community-area hardship data. 
+                    The Hardship Index summarises several socioeconomic indicators, 
+                    including poverty, unemployment, educational attainment, crowded housing, 
+                    dependency, and per-capita income. Higher scores represent greater 
+                    socioeconomic hardship.
+                </p>
+
+                <p>
+                    Rather than comparing raw crime totals, I calculated the percentage 
+                    of each crime category recorded in high-hardship community areas. 
+                    This makes the visualisation a comparison of where different crimes occur, 
+                    rather than how common each crime is overall. 
+                </p>
+
+                <div class="project-visual">
+                    <img 
+                        src="../images/projects/crimes_high-hardship_areas_plot.png" 
+                        alt="Crime types more common in high-hardship areas">
+                </div>
+
+                <p>
+                    The strongest concentrations in high-hardship areas were found for gambling, 
+                    prostitution, narcotics, homicide, and weapons violations. 
+                    These results show an association between the geographical distribution 
+                    of certain recorded crimes and socioeconomic hardship. 
+                </p>
+
+                <p>
+                    Importantly, I treated hardship as a 
+                    <strong>context variable rather than a causal explanation.</strong>
+                    These visualisations do not show that poverty, 
+                    unemployment, or lower educational attainment cause particular crimes. 
+                    They show that some recorded crime categories are more geographically 
+                    concentrated in communities facing greater socioeconomic challenges. 
+                </p>
+
+                <p>
+                    To explore these patterns geographically, I selected the five most 
+                    frequently recorded crime categories in Chicago overall, and the five 
+                    categories with the highest proportion of incidents in high-hardship areas. 
+                    Narcotics appeared in both groups; this resulted in nine crime 
+                    catagories for the interactive map. 
+                </p>
+
+                <p class="visualisation-hint">
+                    Explore the map using the layer controls to compare crime categories 
+                    and socioeconomic hardship across Chicago.
+                </p>
+
+                <div class="project-visual">
+                <iframe 
+                        class="project-map"
+                        src="../visualisations/interactive_crime_&_hardship_map.html" 
+                        title="Interactive map of Chicago crime and socioeconomic hardship"
+                        loading="lazy">
+                </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exploring Spatial and Temporal Patterns -->
+        <section class="project-section">
+            <div class="max-width">
+            
+                <h2>Exploring Spatial and Temporal Patterns</h2>
+
+                <p>
+                    In addition to comparing crime patterns with socioeconomic hardship, 
+                    I also explored how individual crime types varied across both location 
+                    and time. As part of the project, I was asked to investigate the 
+                    geographical distribution of prostitution-related incidents recorded 
+                    on Friday nights. The resulting interactive heatmap shows the 
+                    distribution of these incidents across Chicago, with markers 
+                    highlighting the five community areas with the highest number of 
+                    recorded incidents.
+                </p>
+
+                <p class="visualisation-hint">
+                    Explore the interactive map by zooming, panning, and selecting the highlighted 
+                    community areas for more information.
+                </p>
+
+                <div class="project-visual">
+                <iframe 
+                        class="project-map"
+                        src="../visualisations/prostitution_friday_night_map.html" 
+                        title="Interactive map of prostitution-related incidents recorded on Friday nights in Chicago"
+                        loading="lazy">
+                </iframe>
+                </div>
+                
+                <p>
+                    The incidents were distributed across several parts of Chicago 
+                    rather than being concentrated in a single area, although some 
+                    locations showed noticeably higher densities.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Exploring Spatial and Temporal Patterns -->
+        <section class="project-section">
+            <div class="max-width">
+
+                <h2>Reflection</h2>
+
+                <p>
+                    What I enjoyed most about this project was that many of the tasks
+                    were open-ended. Rather than simply applying a particular Pandas
+                    function or reproducing a predefined result, I often had to
+                    investigate the data, decide how to approach a question, and
+                    determine which visualisation would communicate the result most
+                    effectively.
+                </p>
+
+                <p>
+                    Data visualisation was an especially enjoyable part of the project
+                    for me. Before studying AI and data analysis, I studied graphic
+                    design and animation, so I already had an interest in visual
+                    communication. This project gave me an opportunity to apply that
+                    background in a very different context: using visual design not
+                    just to make something visually appealing, but to make patterns
+                    within complex data easier to understand and explore.
+                </p>
+
+                <p>
+                    That interest also led me beyond some of the original assignment
+                    requirements. The interactive crime and hardship map, for example,
+                    was an additional visualisation I chose to create after exploring
+                    the relationship between crime data and socioeconomic hardship.
+                    Being able to take a question further and experiment with different
+                    ways of presenting the results was one of the most rewarding parts
+                    of the project.
+                </p>
+
+                <div class="project-links">
+                    <a href="https://github.com/l3xbot/Data_Processing_Project_Visualisation"
+                        class="github-button"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                        View Project on GitHub
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer Section Start -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/l3xbot" class="icon" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/alexander-glimmark/" class="icon" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://discord.com/users/349145976570773506" class="icon" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://www.instagram.com/l3xbot" class="icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <span>Created By <a href="https://github.com/l3xbot">Alexander Glimmark</a> | <span class="fa-regular fa-copyright"></span> 2026 All Rights Reserved</span>
+    </footer>
+
+</body>
+
+</html>

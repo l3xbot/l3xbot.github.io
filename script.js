@@ -17,35 +17,6 @@ $(document).ready(function(){
         }
     });
 
-    // ===================
-    // Toggle Mobile Menu 
-    // ===================
-    $('.menu-btn').click(function(){
-        $menu.toggleClass('active');
-        $menuBtnIcon.toggleClass('active');
-    });
-
-    // Smooth Scroll for Navbar Links
-    $menuLinks.on('click', function(e) {
-        var target = $(this).attr('href');
-
-        // Only scroll if the href starts with #
-        if (target.startsWith('#') && $(target).length) {
-            e.preventDefault();
-
-            // Close mobile menu if open
-            if ($menu.hasClass('active')) {
-                $menu.removeClass('active');
-                $menuBtnIcon.removeClass('active');
-            }
-
-            // Animate scroll
-            $('html, body').animate({
-                scrollTop: $(target).offset().top - $navbar.outerHeight() // offset for fixed navbar
-            }, 600);
-        }
-    });
-
     // Typing Animation Script
     var typed = new Typed(".typing", {
         strings: ["AI Developer", "Data Scientist", "ML Developer", "Data Engineer"],

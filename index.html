@@ -13,6 +13,9 @@
     <!-- Icons from Font Awesome: https://fontawesome.com/start?o=r -->
     <script src="https://kit.fontawesome.com/5bcf052ad7.js" crossorigin="anonymous"></script>
 
+    <!-- Navbar Hamburger -->
+    <script src="navbar.js" defer></script>
+
     <!-- Typed effect -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
 
@@ -28,9 +31,8 @@
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#interest">Areas of Interest</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <!-- <li><a href="#">Projects</a></li> -->
                 <li><a href="#lia">LIA</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -47,7 +49,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Alexander&nbsp;Glimmark</div>
-                <div class="text-3">And I'm an aspiring <span class="typing"></span></div>
+                <div class="text-3">Your next <span class="typing"></span></div>
                 <a href="#lia">Your Next Intern</a>
             </div>
         </div>
@@ -76,35 +78,70 @@
     </section>
 
 
-    <!-- Areas of Interest Section Start -->
-    <section class="interest" id="interest">
+    <!-- Projects Section Start -->
+    <section class="projects" id="projects">
         <div class="max-width">
-            <h2 class="title">Areas of Interest</h2>
-            <div class="interest-content">
+            <h2 class="title">Projects</h2>
 
-                <a class="card" data-title='Data&nbsp;Science' data-text="Here is a detailed description of Data Science">
-                    <div class="box">
-                        <i class="fa-solid fa-chart-simple"></i>
-                        <div class="text">Data&nbsp;Science</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Enim, nobis?</p>
+            <div class="projects-content">
+
+                <a href="projects/chicago-crime.html" class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-frame">
+                            <img 
+                                src="images/projects/vehicle_thefts_heatmap.png" 
+                                alt="Heatmap of motor vehicle thefts in Chicago by weekday and hour."
+                            >
+                        </div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Chicago Crime Data Analysis & Visualisation</h3>
+
+                        <p>
+                            An exploration of Chicago crime and socioeconomic data, 
+                            focusing on data visualisation, temporal patterns, and 
+                            geospatial analysis. 
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Matplotlib</span>
+                            <span>Seaborn</span>
+                            <span>Plotly</span>
+                            <span>GeoPandas</span>
+                            <span>Folium</span>
+                        </div>
                     </div>
                 </a>
 
-                <a class="card" data-title='AI&nbsp;&&nbsp;ML' data-text="Here is a detailed description of AI & ML">
-                    <div class="box">
-                        <i class="fa-solid fa-circle-nodes"></i>
-                        <div class="text">AI&nbsp;&&nbsp;ML</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Enim, nobis?</p>
+                <a href="projects/ecommerce-ml.html" class="project-card">
+                    <div class="project-image">
+                        <div class="project-image-frame">
+                            <img 
+                                src="images/projects/rf_feature_importance_plot_presentation.png" 
+                                alt="Random Forest feature importance chart"
+                            >
+                        </div>
                     </div>
-                </a>
 
-                <a class="card" data-title='Programming' data-text="Here is a detailed description of Programming">
-                    <div class="box">
-                        <i class="fa-solid fa-code"></i>
-                        <div class="text">Programming</div>
-                        <p>Python programming </p>
+                    <div class="project-info">
+                        <h3>E-commerce Conversion Prediction</h3>
+
+                        <p>
+                            A machine learning classification project comparing 
+                            several models for predicting whether an online
+                            shopping session results in a purchase.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>Scikit-learn</span>
+                            <span>XGBoost</span>
+                            <span>Machine Learning</span>
+                        </div>
                     </div>
                 </a>
 
@@ -152,7 +189,7 @@
 
                             <div class="skill-card">
                                 <img src="images/logos/matplotlib-logo.png" alt="Matplotlib Logo">
-                                <p>MatPlotLib</p>
+                                <p>Matplotlib</p>
                             </div>
 
                             <div class="skill-card">
@@ -173,6 +210,11 @@
                             <div class="skill-card">
                                 <img src="images/logos/seaborn-logo.svg" alt="Seaborn Logo">
                                 <p>Seaborn</p>
+                            </div>
+
+                            <div class="skill-card">
+                                <img src="images/logos/plotly-logo.png" alt="Plotly Logo">
+                                <p>Plotly</p>
                             </div>
 
                             <div class="skill-card">
@@ -324,7 +366,7 @@
             </a>
         </div>
 
-        <span>Created By <a href="https://github.com/l3xbot">Alexander Glimmark</a> | <span class="fa-regular fa-copyright"></span> 2025 All Rights Reserved</span>
+        <span>Created By <a href="https://github.com/l3xbot">Alexander Glimmark</a> | <span class="fa-regular fa-copyright"></span> 2026 All Rights Reserved</span>
     </footer>
 
 
